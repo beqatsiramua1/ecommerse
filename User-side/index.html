@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <title>User side</title>
+</head>
+<body>
+    
+    <!-- <div class="loader"></div>
+    <iframe width="950" height="534" src="https://www.youtube.com/embed/Bs3LQpJJ_sI" title="BASS BOOSTED MUSIC MIX 2022 🔥 CAR BASS MUSIC 2022 🔈 BEST EDM, BOUNCE, ELECTRO HOUSE OF POPULAR SONGS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="950" height="534" src="https://www.youtube.com/embed/Bs3LQpJJ_sI" title="BASS BOOSTED MUSIC MIX 2022 🔥 CAR BASS MUSIC 2022 🔈 BEST EDM, BOUNCE, ELECTRO HOUSE OF POPULAR SONGS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="950" height="534" src="https://www.youtube.com/embed/Bs3LQpJJ_sI" title="BASS BOOSTED MUSIC MIX 2022 🔥 CAR BASS MUSIC 2022 🔈 BEST EDM, BOUNCE, ELECTRO HOUSE OF POPULAR SONGS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    
+    <div class="first-section">
+        <div class="container">
+            <div class="first-section-content">
+                <div class="first-section-left">
+                    <div class="first-section-left-first">
+                        <div class="first-section-left-email-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="first-section-left-email-text">
+                            <span class="text">email@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="first-section-left-second">
+                        <div class="first-section-left-second-phone-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="first-section-left-second-phone-text">
+                            <span class="text">+11-22-33-44</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="first-section-right">
+                    <div class="first-section-right-first">
+                        <div class="first-section-right-first-websites">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <i class="fa-brands fa-pinterest-p"></i>
+                        </div>
+                    </div>
+                    <div class="first-section-right-second">
+                        <div class="first-section-right-second-login">
+                            <div class="first-section-right-second-login-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="first-section-right-second-login-text">
+                                <span class="text">Login</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container">
+        <div class="second-section">
+            <div class="second-section-left-side">
+                <div class="second-section-left-logo">
+                    <a href="index.html">
+                        <img class="logoSrc" src="" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="second-section-middle-side">
+                <div class="second-section-middle-input">
+                    <input type="text" class="top-section-input" placeholder="What do you need?">
+                </div>
+                <div class="second-section-middle-input-search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="second-section-right-side">
+                <div class="second-section-right-side-heart-icon">
+                    <i class="fa-regular fa-heart"></i>
+                    <div class="second-section-right-side-heart-icon-num">
+                        <span>1</span>
+                    </div>
+                </div>
+                <div class="second-section-right-side-bag-icon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <div class="second-section-right-side-bag-icon-num">
+                        <span>1</span>
+                    </div>
+                </div>
+                <div class="second-section-right-side-all-price">
+                    <span class="text">$150.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="third-section">
+        <div class="container">
+            <div class="third-section-content">
+                <div class="third-section-content-top">
+                    <ul class="third-section-content-top-ul">
+                        <li class="active"><a href="index.html">HOME</a></li>
+                        <li><a href="shop.html">SHOP</a></li>
+                        <li class="main-collection"><a href="">COLLECTION</a>
+                            <ul class="main-collection-type main-ul">
+                                <li>Men</li>
+                                <li>Women</li>
+                                <li>Kid</li>
+                            </ul>
+                        </li>
+                        <li><a href="blog.html">BLOG</a></li>
+                        <li><a href="">CONTACT</a></li>
+                        <li><a href="">PAGES</a></li>
+                    </ul>
+                </div>
+                <div class="third-section-content-bottom">
+                    <div class="third-section-content-bottom-menu">
+                        <span>MENU</span>
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+                <ul class="new-ul">
+                    <li class=""><p>HOME</p></li>
+                    <li><p>SHOP</p></li>
+                    <li class="new-collection"><p>COLLECTION ></p>
+                        <ul class="new-ul-collection">
+                            <li>Men</li>
+                            <li>Women</li>
+                            <li>Kid</li>
+                        </ul>
+                    </li>
+                    <li><p>BLOG</p></li>
+                    <li><p>CONTACT</p></li>
+                    <li><p>PAGES</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="fourth-section">
+
+    </div>
+
+    
+
+    <div class="fifth-container-wrapper">
+        <div class="container">
+            <div class="fifth-section">
+                <div class="fifth-container men">
+                    <span>MEN'S</span>
+                </div>
+                <div class="fifth-container women">
+                    <span>WOMEN'S</span>
+                </div>
+                <div class="fifth-container kid">
+                    <span>KID'S</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="six-section">
+        <div class="container">
+            <div class="six-section-wrapper">
+                <div class="six-section-left">
+                    <span>Women's</span>
+                </div>
+                <div class="six-section-right">
+                    <div class="carousel owl-carousel">
+                        <div class="card card1">A</div>
+                        <div class="card card2">B</div>
+                        <div class="card card3">C</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="seventh-section">
+        <div class="container">
+            <div class="seventh-section-container">
+                <div class="deal-data-information">
+                    <h1>Deal of The Week</h1>
+                    <p class="deal-data-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                        do ipsum dolor sit amet, consectetur adipisicing elit</p>
+                    <p class="deal-data-price"><span class="price-span">$35.00</span>/HanBag</p>
+                    <button>SHOP NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="six-section">
+        <div class="container">
+            <div class="six-section-wrapper">
+                <div class="six-section-right">
+                    <div class="carousel owl-carousel">
+                        <div class="card card1">A</div>
+                        <div class="card card2">B</div>
+                        <div class="card card3">C</div>
+                    </div>
+                </div>
+                <div class="seven-section-right">
+                    <span>Men's</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="eight-section"></div>
+
+
+    <div class="nine-section">
+        <h1>From The Blog</h1>
+        <div class="container">
+            <div class="nine-section-wrapper">
+                <div class="nine-section-container">
+                    <div class="nine-section-container-top"></div>
+                    <div class="nine-section-container-bottom">
+                        <div class="nine-section-container-bottom-first-part">
+                            <div class="nine-section-container-bottom-first-part-left">
+                                <div class="nine-section-container-bottom-first-part-left-left">
+                                    <i class="fa-regular fa-calendar"></i>
+                                </div>
+                                <div class="nine-section-container-bottom-first-part-left-right">
+                                    <span>May 4, 2019</span>
+                                </div>
+                            </div>
+                            <div class="nine-section-container-bottom-first-part-right">
+                                <div class="nine-section-container-bottom-first-part-right-left">
+                                    <i class="fa-regular fa-comment"></i>
+                                </div>
+                                <div class="nine-section-container-bottom-first-part-right-right">
+                                    <span>5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nine-section-container-bottom-second-part">
+                            <h2>The Best Street Style From London Fashion Week</h2>
+                        </div>
+                        <div class="nine-section-container-bottom-third-part">
+                            <span>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="nine-section-container">
+                    <div class="nine-section-container-top nine-section-second"></div>
+                    <div class="nine-section-container-bottom">
+                        <div class="nine-section-container-bottom-first-part">
+                            <div class="nine-section-container-bottom-first-part-left">
+                                <div class="nine-section-container-bottom-first-part-left-left">
+                                    <i class="fa-regular fa-calendar"></i>
+                                </div>
+                                <div class="nine-section-container-bottom-first-part-left-right">
+                                    <span>May 4, 2019</span>
+                                </div>
+                            </div>
+                            <div class="nine-section-container-bottom-first-part-right">
+                                <div class="nine-section-container-bottom-first-part-right-left">
+                                    <i class="fa-regular fa-comment"></i>
+                                </div>
+                                <div class="nine-section-container-bottom-first-part-right-right">
+                                    <span>5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nine-section-container-bottom-second-part">
+                            <h2>Vogue's Ultimate Guide To Autumn/Winter 2019 Shoes</h2>
+                        </div>
+                        <div class="nine-section-container-bottom-third-part">
+                            <span>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="nine-section-container">
+                    <div class="nine-section-container-top nine-section-third"></div>
+                    <div class="nine-section-container-bottom">
+                        <div class="nine-section-container-bottom-first-part">
+                            <div class="nine-section-container-bottom-first-part-left">
+                                <div class="nine-section-container-bottom-first-part-left-left">
+                                    <i class="fa-regular fa-calendar"></i>
+                                </div>
+                                <div class="nine-section-container-bottom-first-part-left-right">
+                                    <span>May 4, 2019</span>
+                                </div>
+                            </div>
+                            <div class="nine-section-container-bottom-first-part-right">
+                                <div class="nine-section-container-bottom-first-part-right-left">
+                                    <i class="fa-regular fa-comment"></i>
+                                </div>
+                                <div class="nine-section-container-bottom-first-part-right-right">
+                                    <span>5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nine-section-container-bottom-second-part">
+                            <h2>How To Brighten Your Wardrobe With A Dash Of Lime</h2>
+                        </div>
+                        <div class="nine-section-container-bottom-third-part">
+                            <span>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="ten-section">
+            <div class="ten-section-container ten-section-left">
+                <div class="ten-section-left">
+                    <img src="https://preview.colorlib.com/theme/fashi/img/xicon-1.png.pagespeed.ic.1MBleL9YE6.webp" alt="">
+                </div>
+                <div class="ten-section-right">
+                    <p>FREE SHIPPING</p>
+                    <span>For all order over 99$</span>
+                </div>
+            </div>
+            <div class="ten-section-container ten-section-middle">
+                <div class="ten-section-left">
+                    <img src="https://preview.colorlib.com/theme/fashi/img/xicon-2.png.pagespeed.ic.GdrReyKBWV.webp" alt="">
+                </div>
+                <div class="ten-section-right">
+                    <p>Delivery On Time</p>
+                    <span>If good have prolems</span>
+                </div>
+            </div>
+            <div class="ten-section-container ten-section-middle">
+                <div class="ten-section-left">
+                    <img src="https://preview.colorlib.com/theme/fashi/img/xicon-1.png.pagespeed.ic.1MBleL9YE6.webp" alt="">
+                </div>
+                <div class="ten-section-right">
+                    <p>Secure Payment</p>
+                    <span>100% secure payment</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="eleventh-section"></div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-top-left">
+                    <div class="footer-top-left-first">
+                        <img src="https://preview.colorlib.com/theme/fashi/img/xfooter-logo.png.pagespeed.ic.2qqYFX4O6F.webp" alt="">
+                    </div>
+                    <div class="footer-top-left-second">
+                        <span class="footer-text">Address: 60-49 Road</span>
+                        <span class="footer-text">11378 New York</span>
+                        <span class="footer-text">Phone: +65 11.188.888</span>
+                        <span class="footer-text">Email:</span>
+                        <span class="footer-text">hello.colorlib@gmail.com</span>
+                    </div>
+                    <div class="footer-top-left-third">
+                        <div class="footer-left-third-content">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </div>
+                        <div class="footer-left-third-content">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="footer-left-third-content">
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                        <div class="footer-left-third-content">
+                            <i class="fa-brands fa-pinterest-p"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-top-middle">
+                    <div class="footer-top-middle-left">
+                        <h6 class="footer-text-header">Information</h6>
+                        <div class="footer-middle-part-content">
+                            <span class="footer-text">About Us</span>
+                            <span class="footer-text">Checkout</span>
+                            <span class="footer-text">Contact</span>
+                            <span class="footer-text">Serivius</span>
+                        </div>
+                    </div>
+                    <div class="footer-top-middle-right">
+                        <h6 class="footer-text-header">My Account</h6>
+                        <div class="footer-middle-part-content">
+                            <span class="footer-text">My Account</span>
+                            <span class="footer-text">Contact</span>
+                            <span class="footer-text">Shopping Cart</span>
+                            <span class="footer-text">Shop</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-top-right">
+                    <h6 class="footer-text-header">Join Our Newsletter Now</h6>
+                    <span class="footer-text">Get E-mail updates about our latest shop and special offers.</span>
+                    <div class="footer-top-right-inp">
+                        <input type="text" placeholder="Enter Your Mail">
+                        <button>SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <span class="footer-text">Copyright ©2022 All rights reserved | This template is made with  by Colorlib</span>
+                </div>
+                <div class="footer-bottom-right"></div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBIOeHCYHJwPh-Wua2aU8ElO6mnE-eCvl4",
+            authDomain: "it-step-ecommerce.firebaseapp.com",
+            projectId: "it-step-ecommerce",
+            storageBucket: "it-step-ecommerce.appspot.com",
+            messagingSenderId: "82338103034",
+            appId: "1:82338103034:web:5bac388e847ce5705d9343",
+            measurementId: "G-C20X4E6QRK"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="index.js"></script>
+    <script src="loader.js"></script>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <title>User side</title>
+</head>
+<body>
+    <div class="first-section">
+        <div class="container">
+            <div class="first-section-content">
+                <div class="first-section-left">
+                    <div class="first-section-left-first">
+                        <div class="first-section-left-email-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="first-section-left-email-text">
+                            <span class="text">email@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="first-section-left-second">
+                        <div class="first-section-left-second-phone-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="first-section-left-second-phone-text">
+                            <span class="text">+11-22-33-44</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="first-section-right">
+                    <div class="first-section-right-first">
+                        <div class="first-section-right-first-websites">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <i class="fa-brands fa-pinterest-p"></i>
+                        </div>
+                    </div>
+                    <div class="first-section-right-second">
+                        <div class="first-section-right-second-login">
+                            <div class="first-section-right-second-login-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="first-section-right-second-login-text">
+                                <span class="text">Login</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="second-section">
+            <div class="second-section-left-side">
+                <div class="second-section-left-logo">
+                    <a href="index.html">
+                        <img class="logoSrc" src="" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="second-section-middle-side">
+                <div class="second-section-middle-input">
+                    <input type="text" class="top-section-input" placeholder="What do you need?">
+                </div>
+                <div class="second-section-middle-input-search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="second-section-right-side">
+                <div class="second-section-right-side-heart-icon">
+                    <i class="fa-regular fa-heart"></i>
+                    <div class="second-section-right-side-heart-icon-num">
+                        <span>1</span>
+                    </div>
+                </div>
+                <div class="second-section-right-side-bag-icon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <div class="second-section-right-side-bag-icon-num">
+                        <span>1</span>
+                    </div>
+                </div>
+                <div class="second-section-right-side-all-price">
+                    <span class="text">$150.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="third-section">
+        <div class="container">
+            <div class="third-section-content">
+                <div class="third-section-content-top">
+                    <ul class="third-section-content-top-ul">
+                        <li><a href="index.html">HOME</a></li>
+                        <li class="active"><a href="shop.html">SHOP</a></li>
+                        <li class="main-collection"><a href="">COLLECTION</a>
+                            <ul class="main-collection-type main-ul">
+                                <li>Men</li>
+                                <li>Women</li>
+                                <li>Kid</li>
+                            </ul>
+                        </li>
+                        <li><a href="blog.html">BLOG</a></li>
+                        <li><a href="">CONTACT</a></li>
+                        <li><a href="">PAGES</a></li>
+                    </ul>
+                </div>
+                <div class="third-section-content-bottom">
+                    <div class="third-section-content-bottom-menu">
+                        <span>MENU</span>
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+                <ul class="new-ul">
+                    <li class=""><p>HOME</p></li>
+                    <li><p>SHOP</p></li>
+                    <li class="new-collection"><p>COLLECTION ></p>
+                        <ul class="new-ul-collection">
+                            <li>Men</li>
+                            <li>Women</li>
+                            <li>Kid</li>
+                        </ul>
+                    </li>
+                    <li><p>BLOG</p></li>
+                    <li><p>CONTACT</p></li>
+                    <li><p>PAGES</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="shop-main-container">
+            <div class="shop-main-container-left">
+                <div class="shop-main-container-gender-part">
+                    <div class="shop-main-container-gender-title">
+                        <h3>Category</h3>
+                    </div>
+                    <div class="shop-main-container-gender-type">
+                        <select class="gender">
+                            <option value="men">Men</option>
+                            <option value="women">Women</option>
+                            <option value="kid">Kids</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="shop-main-container-right">
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-top-left">
+                    <div class="footer-top-left-first">
+                        <img src="https://preview.colorlib.com/theme/fashi/img/xfooter-logo.png.pagespeed.ic.2qqYFX4O6F.webp" alt="">
+                    </div>
+                    <div class="footer-top-left-second">
+                        <span class="footer-text">Address: 60-49 Road</span>
+                        <span class="footer-text">11378 New York</span>
+                        <span class="footer-text">Phone: +65 11.188.888</span>
+                        <span class="footer-text">Email:</span>
+                        <span class="footer-text">hello.colorlib@gmail.com</span>
+                    </div>
+                    <div class="footer-top-left-third">
+                        <div class="footer-left-third-content">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </div>
+                        <div class="footer-left-third-content">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="footer-left-third-content">
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                        <div class="footer-left-third-content">
+                            <i class="fa-brands fa-pinterest-p"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-top-middle">
+                    <div class="footer-top-middle-left">
+                        <h6 class="footer-text-header">Information</h6>
+                        <div class="footer-middle-part-content">
+                            <span class="footer-text">About Us</span>
+                            <span class="footer-text">Checkout</span>
+                            <span class="footer-text">Contact</span>
+                            <span class="footer-text">Serivius</span>
+                        </div>
+                    </div>
+                    <div class="footer-top-middle-right">
+                        <h6 class="footer-text-header">My Account</h6>
+                        <div class="footer-middle-part-content">
+                            <span class="footer-text">My Account</span>
+                            <span class="footer-text">Contact</span>
+                            <span class="footer-text">Shopping Cart</span>
+                            <span class="footer-text">Shop</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-top-right">
+                    <h6 class="footer-text-header">Join Our Newsletter Now</h6>
+                    <span class="footer-text">Get E-mail updates about our latest shop and special offers.</span>
+                    <div class="footer-top-right-inp">
+                        <input type="text" placeholder="Enter Your Mail">
+                        <button>SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <span class="footer-text">Copyright ©2022 All rights reserved | This template is made with  by Colorlib</span>
+                </div>
+                <div class="footer-bottom-right"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBIOeHCYHJwPh-Wua2aU8ElO6mnE-eCvl4",
+            authDomain: "it-step-ecommerce.firebaseapp.com",
+            projectId: "it-step-ecommerce",
+            storageBucket: "it-step-ecommerce.appspot.com",
+            messagingSenderId: "82338103034",
+            appId: "1:82338103034:web:5bac388e847ce5705d9343",
+            measurementId: "G-C20X4E6QRK"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="main.js"></script>
+    <script src="loader.js"></script>
+    <script src="shop.js"></script>
+
+</body>
+</html>
